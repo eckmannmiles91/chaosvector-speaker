@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.onnx
+*.npz
+.venv/
+.env
+*.wav
+*.mp3
+.ruff_cache/
+.pytest_cache/

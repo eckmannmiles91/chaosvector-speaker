@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chaosvector-speaker"
+version = "0.1.0"
+description = "Speaker verification and identification with family voice enrollment"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Miles Eckman" }]
+dependencies = [
+    "numpy>=1.24",
+    "onnxruntime>=1.16",
+]
+
+[project.optional-dependencies]
+record = ["sounddevice>=0.4"]
+wyoming = ["wyoming>=1.5"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+chaosvector-speaker = "chaosvector_speaker.__main__:main"
+
+[tool.ruff]
+line-length = 99
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
